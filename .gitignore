@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# NS-3 build artifacts (if any end up here)
+*.o
+*.so
+
+# Don't ignore results — we commit them for saved-results deployment
+# But do ignore very large temp files
+*.tmp
