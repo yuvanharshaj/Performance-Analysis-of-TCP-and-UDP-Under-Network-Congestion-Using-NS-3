@@ -1,0 +1,4 @@
+FlowID,Protocol,FlowType,Source,Destination,TxPackets,RxPackets,LostPackets,TxBytes,RxBytes,PDR_percent,PacketLoss_percent,Throughput_Mbps,AvgDelay_ms,AvgJitter_ms,Duration_s
+1,TCP,TCP Forward,10.1.1.1:49153,10.1.4.2:50000,439,389,50,256480,227080,88.61,11.39,0.37,155.773,3.511,4.909
+2,UDP,UDP Forward,10.1.2.1:49153,10.1.5.2:50001,976,930,46,1026752,978360,95.29,4.71,1.7658,393.153,0.642,4.432
+3,TCP,TCP ACK/Reverse,10.1.4.2:50000,10.1.1.1:49153,239,239,0,14440,14440,100.0,0.0,0.0237,14.35,0.002,4.881
