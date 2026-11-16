@@ -7,6 +7,7 @@
 [![NS-3 Version](https://img.shields.io/badge/NS--3-3.42-blue.svg)](https://www.nsnam.org/)
 [![Python](https://img.shields.io/badge/Python-3.12%20%7C%203.13-green.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red.svg)](https://streamlit.io/)
+[![Project Report PDF](https://img.shields.io/badge/Report-PDF%20(38%20Pages)-purple.svg)](Performance_Analysis_of_TCP_and_UDP_Report.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
