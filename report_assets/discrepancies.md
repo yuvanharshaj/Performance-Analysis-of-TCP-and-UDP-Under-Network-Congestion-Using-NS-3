@@ -1,0 +1,13 @@
+# Discrepancy Log: Cross-Source Numerical and Parameter Verification
+
+This document audits numerical and architectural parameter variations across three primary project artifacts: (1) the source code repository simulation runs (`results/processed/experiments_summary.csv`), (2) the deployed web interactive application (`https://tcp-udp-congestion-ns3.vercel.app/`), and (3) earlier drafts or reference PDFs.
+
+Per Non-Negotiable Rule 3, the source priority hierarchy is strictly maintained: **(1) Source Code + Repository Datasets > (2) Live Web Application > (3) Previous Draft PDFs**.
+
+| Dimension | Repository Dataset (`experiments_summary.csv`) | Live Web Application (`#report` tab) | Analysis & Reconciliation Reason | Authoritative Source Chosen |
+| :--- | :--- | :--- | :--- | :---: |
+| **Simulation Active Duration** | 19.0 seconds (Start: 1.0s, Stop: 20.0s) | 9.0 seconds (Start: 1.0s, Stop: 10.0s, total 12.0s) | Repository runs longer (19s) to capture long-term steady-state AIMD oscillation across 11 systematic permutations; the web app runs 9s to keep JSON trace payloads lightweight for browser rendering. | **Repository code & CSV for Chapter 8 results** |
+| **Access Link Bandwidth** | 10 Mbps (2 ms delay) | 100 Mbps (1 ms delay) | The C++ script `congestion-analysis.cc` uses 10 Mbps access links with 1000-packet buffer; web app interactive model used 100 Mbps access links to completely isolate bottleneck effects. | **Repository script (`10 Mbps, 2 ms`)** |
+| **Offered UDP Rates in Competition** | 2.0 Mbps constant CBR (OnOff application) | 3.0 Mbps in Exp D, 2/5/8 Mbps in Exp B | The primary parameter matrix in `run_experiments.py` fixes UDP at 2.0 Mbps to compare exactly against 1, 2, 5, 10 Mbps bottleneck capacities; the web app showcases an alternate 3.0 Mbps competition scenario. | **Repository dataset for all core tables; web app data cited as supplementary benchmark** |
+| **Bottleneck Queue Sizes Evaluated** | 10, 25, 50, 100 packets | 50 packets (in 7 static runs) / 10, 25, 50, 100 pkts (in 684 Lab runs) | Both artifacts explore identical buffer dimensions (10, 25, 50, 100). The static web report focuses on 50 packets, while the full repository script measures all four systematically. | **Repository dataset (complete 4-point sweep)** |
+| **Metric Definitions** | FlowMonitor IP Layer Throughput = `RxBytes * 8 / Duration` | Application Goodput = `Payload bytes / Duration` | FlowMonitor measures throughput inclusive of packet framing at IP layer, whereas socket-level goodput counts purely application payload. Both are mathematically consistent when header overhead (~40 B) is accounted for. | **Repository FlowMonitor calculations with explicit equation documentation** |

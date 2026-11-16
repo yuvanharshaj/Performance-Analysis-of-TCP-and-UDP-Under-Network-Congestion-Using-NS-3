@@ -6,9 +6,20 @@
 
 [![NS-3 Version](https://img.shields.io/badge/NS--3-3.42-blue.svg)](https://www.nsnam.org/)
 [![Python](https://img.shields.io/badge/Python-3.12%20%7C%203.13-green.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red.svg)](https://streamlit.io/)
-[![Project Report PDF](https://img.shields.io/badge/Report-PDF%20(38%20Pages)-purple.svg)](Performance_Analysis_of_TCP_and_UDP_Report.pdf)
+[![Live Web Portal](https://img.shields.io/badge/Web%20App-Vercel%20Live-brightgreen.svg)](https://tcp-udp-congestion-ns3.vercel.app/)
+[![Project Report PDF](https://img.shields.io/badge/Final%20Report-PDF%20(36%20Pages)-purple.svg)](Performance_Analysis_of_TCP_and_UDP_Final_Report.pdf)
+[![QA Status](https://img.shields.io/badge/QA%20Audit-Passed%20(100%25)-blue.svg)](report_assets/qa_report.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+## Academic Project Deliverables & Reports
+- **Final Project Report (PDF, 36 Pages):** [`Performance_Analysis_of_TCP_and_UDP_Final_Report.pdf`](Performance_Analysis_of_TCP_and_UDP_Final_Report.pdf)
+- **Final Project Report (Editable Word DOCX):** [`Performance_Analysis_of_TCP_and_UDP_Final_Report.docx`](Performance_Analysis_of_TCP_and_UDP_Final_Report.docx)
+- **Evidence Ledger (Verified Data Audit):** [`report_assets/evidence_ledger.md`](report_assets/evidence_ledger.md)
+- **Discrepancy Log (Parameter & Source Audit):** [`report_assets/discrepancies.md`](report_assets/discrepancies.md)
+- **Quality Assurance Audit Report:** [`report_assets/qa_report.md`](report_assets/qa_report.md)
+- **Interactive Live Web Application:** [https://tcp-udp-congestion-ns3.vercel.app/](https://tcp-udp-congestion-ns3.vercel.app/)
 
 ---
 
@@ -73,16 +84,18 @@ tcp-udp-congestion-analysis-ns3/
 │   └── run_experiments.py         # Automated runner for all 3 experiment sets
 ├── app/
 │   └── app.py                     # Interactive Streamlit dashboard
+├── report_assets/                 # Audit ledgers, QA reports, diagrams & live app screenshots
+│   ├── evidence_ledger.md         # Source tracing for every empirical metric
+│   ├── discrepancies.md           # Parameter variation analysis between repo & web app
+│   ├── qa_report.md               # Automated and visual verification audit
+│   └── *.png                      # Vector-styled diagrams and web app screenshots
 ├── results/
 │   ├── raw/                       # FlowMonitor XML and Cwnd CSV outputs
 │   └── processed/                 # Consolidated metrics summary CSV
 ├── graphs/                        # High-resolution (300 DPI) generated plots
 ├── docs/                          # Detailed academic report sections (01 to 07)
-├── scripts/
-│   ├── run_all.sh                 # Full simulation & plotting pipeline script
-│   └── run_dashboard.bat          # Windows one-click dashboard launcher
-├── tests/
-│   └── test_analysis.py           # Automated unit tests (safe guards & parsing)
+├── Performance_Analysis_of_TCP_and_UDP_Final_Report.docx  # Editable final report (36 pages)
+├── Performance_Analysis_of_TCP_and_UDP_Final_Report.pdf   # Print-ready final report (36 pages)
 ├── requirements.txt               # Python package dependencies
 ├── README.md                      # Comprehensive academic project documentation
 ├── PROJECT_STATUS.md              # Milestone tracking & verified command logs

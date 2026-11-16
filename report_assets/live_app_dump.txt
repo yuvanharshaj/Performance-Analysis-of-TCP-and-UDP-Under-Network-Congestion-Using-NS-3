@@ -1,0 +1,141 @@
+TCP vs UDP
+Lab
+Report
+Break the network
+
+Set up the link, choose who sends, predict what will happen, then run it. Every result is a real NS-3 simulation of this exact setup (684 configurations, simulated ahead of time).
+
+Level 1
+
+Packet
+
+0 XP
+next level at 60
+
+0 of 11 missions
+
+Reset progress
+Bottleneck speed
+
+The slow link between the two routers.
+
+2 Mbps
+5 Mbps
+10 Mbps
+Router buffer
+
+Packets Router A can hold before it starts dropping.
+
+10 pkts
+25 pkts
+50 pkts
+100 pkts
+Link delay
+
+One-way travel time across the bottleneck.
+
+5 ms
+20 ms
+50 ms
+
+TCP sender
+
+Downloads as fast as congestion control allows.
+
+UDP sender
+
+3 Mbps
+
+Sends at a fixed rate and never slows down.
+
+Off
+12 Mbps
+
+Predict first
+
+Guess before you run. Closer guesses earn more XP.
+
+TCP goodput
+2.5 Mbps
+Run experiment
+Pause
+Simulation time
+0.7 s of 12 s
+0.5x
+1x
+2x
+TCP received now
+0.00 Mbps
+UDP received now
+0.00 Mbps
+Queue peak this bin
+0 / 50
+Packets dropped so far
+0
+
+Replays the measured 0.5 s time series of this run. One dot stands for 20 packets. Grey dots are queue drops; the trace does not record which flow they belonged to.
+
+Missions
+
+Each one teaches a different congestion effect. Find a configuration that triggers it.
+
+Hello, network 10 XP
+, not completed
+
+Run any experiment.
+
+Hit the ceiling 20 XP
+, not completed
+
+Run UDP alone, sending faster than the bottleneck can carry.
+
+Clean pipe 20 XP
+, not completed
+
+Run UDP alone at 80% or more of the link speed with zero loss.
+
+Drop storm 20 XP
+, not completed
+
+Make UDP lose more than half of its packets.
+
+Bufferbloat 30 XP
+, not completed
+
+Push the average delay above 200 ms.
+
+Fast and snappy 30 XP
+, not completed
+
+TCP alone: use 90% of the link with average delay under 40 ms.
+
+Buffer too small 30 XP
+, not completed
+
+TCP alone: leave more than 20% of the link unused.
+
+Starve TCP 30 XP
+, not completed
+
+Run both senders and leave TCP with under 10% of the link.
+
+Fair share 40 XP
+, not completed
+
+Run both senders and get their goodputs within 10% of each other.
+
+Oracle 40 XP
+, not completed
+
+Score 80 or more on three predictions. (0 / 3)
+
+Explorer 30 XP
+, not completed
+
+Try 15 different configurations. (0 / 15)
+
+Your experiments
+
+Most recent first. Load one to put its settings back on the knobs.
+
+Your experiments will be listed here.
